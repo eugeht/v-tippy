@@ -11,22 +11,24 @@ const hasBindingChanged = (value, oldValue) => {
 export default (opts = {}) => {
   const init = (el, { value = {}, oldValue = {} }, vnode) => {
     if (!el.getAttribute('title')) {
-      var title = '';
+      let titlePrepare = '';
 
       if (!!value.text) {
         if (!!value.header) {
-          title += '<div class="tooltip-custom__header">' + value.header + '</div>';
+          titlePrepare += '<div class="tooltip-custom__header">' + value.header + '</div>';
         }
         if (!!value.src) {
-          title += '<img class="tooltip-custom__img" src="' + value.src + '">';
+          titlePrepare += '<img class="tooltip-custom__img" src="' + value.src + '">';
         }
-        title += '<div class="tooltip-custom__text">' + value.text + '</div>';
+        titlePrepare += '<div class="tooltip-custom__text">' + value.text + '</div>';
       } else {
-        title =
+        titlePrepare =
           value.title ||
           (vnode.data.attrs && vnode.data.attrs.title) ||
           opts.title;
       }
+      const title = titlePrepare;
+
       if (title) {
         el.setAttribute('title', title);
       }
