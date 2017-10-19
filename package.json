@@ -16,7 +16,7 @@
     "test": "echo 'no tests!' && npm run lint",
     "lint": "xo",
     "prepublish": "npm run build",
-    "build": "bili --filename tippy --format umd,cjs,umdCompress --module-name Tippy --buble.objectAssign assign",
+    "build": "bili --filename tippy --format umd,cjs,umdCompress --module-name Tippy --buble.objectAssign assign && npm run cp-css",
     "cp-css": "cp node_modules/tippy.js/dist/tippy.css dist/tippy.css",
     "example": "poi"
   },
