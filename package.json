@@ -1,9 +1,9 @@
 {
   "name": "v-tippy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tooltip directive for Vue.js based on tippy.js",
   "repository": {
-    "url": "egoist/v-tippy",
+    "url": "eugeht/v-tippy",
     "type": "git"
   },
   "main": "dist/tippy.common.js",
@@ -20,7 +20,7 @@
     "cp-css": "cp node_modules/tippy.js/dist/tippy.css dist/tippy.css",
     "example": "poi"
   },
-  "author": "egoist <0x142857@gmail.com>",
+  "author": "eugeht <eugeht@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "nano-assign": "^1.0.0",
